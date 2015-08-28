@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body ng-controller="mainCtrl">
+
+  <ul ng-repeat="movie in movies">
+    <li>{{movie.Title}}</li>
+    <li>{{movie.Year}}</li>
+    <li>{{movie.Released}}</li>
+    <li>{{movie.Runtime}}</li>
+    <li>{{movie.Genre}}</li>
+    <li>{{movie.Director}}</li>
+    <li>{{movie.Writer}}</li>
+    <li>{{movie.Actors}}</li>
+    <li>{{movie.Plot}}</li>
+    <li>{{movie.Awards}}</li>
+    <li>{{movie.imdbID}} IMDB page</li>
+    <li><img src="{{movie.Poster}}"></li>
+    <li>{{movie.Type}}</li>
+  </ul>
+
+  <form ng-submit="getFilm()">
+    <input id="movie" type="text" name="text"/>
+    <input type="submit" id="submit" value="submit">Search</button>
+  <form>
+
+  <p id="movies"></p>
+</body>
+</html>
